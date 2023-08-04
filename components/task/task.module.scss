@@ -1,0 +1,118 @@
+@use '../../styles/variables.scss';
+@use '../../styles/mixins.scss';
+
+.task {
+  padding: 0 5px 20px 5px;;
+}
+
+.title {
+  color: variables.$color2;
+  font-family: TT Hoves;
+  font-size: variables.$font-size40;
+  font-style: normal;
+  font-weight: variables.$font-weight300;
+  text-align: center;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1 300px;
+  row-gap: 10px;
+  justify-content: center;
+}
+
+.number {
+  color: variables.$colorBorder;
+  font-family: SF Pro Display;
+  font-size: variables.$font-size100;
+  font-style: normal;
+  font-weight: variables.$font-weight900;
+  line-height: normal;
+  text-align: center;
+ }
+
+ .text {
+  color: variables.$color1;
+  font-family: TT Hoves;
+  font-size: variables.$font-size22;
+  font-style: normal;
+  font-weight: variables.$font-weight400;
+  line-height: 36px;
+  text-align: center;
+ }
+
+ @media (min-width: 768px) {
+  .task {
+    padding: 40px 20px 20px 20px;
+  }
+  
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 0px;
+    column-gap: 20px;
+  } 
+ }
+
+ @media (min-width: 768px) {
+  .task {
+    padding: 40px 35px 20px 57px;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 0px;
+    column-gap: 20px;
+  } 
+
+  .block1 {
+    @include mixins.flex(flex, center, flex-start);
+  }
+
+  .block2 {
+    @include mixins.flex(flex, center, flex-start);
+  }
+
+  .title {
+    text-align: left;
+    margin-bottom: 62px;
+  }
+
+  .number {
+    line-height: 90px;
+  }
+ }
+
+ @media (min-width: 1200px) {
+  .task {
+    padding: 120px 35px 20px 74px;
+  }
+
+  .title {
+    font-size: variables.$font-size64;
+  }
+
+  .number {
+    font-size: variables.$font-size200;
+    line-height: 150px;
+   }
+
+   .text {
+    text-align: left;
+   }
+ }
+
+ @media (min-width: 1200px) {
+  .task {
+    padding: 100px 210px 20px 135px;
+  }
+
+  .block1 {
+    width: 390px;
+  }
+
+  .wrapper {
+    column-gap: 110px;
+  }
+ }

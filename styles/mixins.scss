@@ -3,3 +3,8 @@
   justify-content: $jc;
   align-items: $ai;
 }
+
+@mixin prevNext ($width, $height) {
+  width: $width;
+  height: $height;
+}

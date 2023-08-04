@@ -1,3 +1,6 @@
+@use '../../styles/variables.scss';
+@use '../../styles/mixins.scss';
+
 .slider {
   min-height: 400px;
 }
@@ -15,7 +18,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 3;
+  z-index: variables.$z-index;
 }
 
 .offer_slide {
@@ -35,29 +38,25 @@
 
 .navigation_block {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include mixins.flex(flex, space-between, center);
   margin: 0 auto;
-  z-index: 3;
+  z-index: variables.$z-index;
 }
 
 .offer_slider_prev {
- width: 30px;
- height: 30px;
+ @include mixins.prevNext(30px, 30px);
  border-radius: 100%;
  border: none;
- z-index: 3; 
+ z-index: variables.$z-index;
  cursor: pointer;
  margin-left: 10px;
 }
 
 .offer_slider_next {
-  width: 30px;
-  height: 30px;
+  @include mixins.prevNext(30px, 30px);
   border-radius: 100%;
   border: none;
-  z-index: 3;
+  z-index: variables.$z-index;
   cursor: pointer;
   margin-right: 10px;
  }
@@ -67,24 +66,21 @@
 }
 
 .see {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include mixins.flex(flex, center, center);
   gap: 15px;
   position: absolute;
   left: 0;
   bottom: 0;
   width: 222px;
   height: 71px;
-  background: #FFF;
+  background: variables.$button-color-backg;
   border: none;
-  color: #333;
+  color: variables.$color1;
   font-family: TT Hoves;
-  font-size: 12px;
+  font-size: variables.$font-size12;
   font-style: normal;
-  font-weight: 400;
-  line-height: 12px; 
-  letter-spacing: 2.4px;
+  font-weight: variables.$font-weight400;
+  letter-spacing: variables.$letterSpacing;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -110,76 +106,69 @@
 
   .offer_slider_wrapper {
     width: 400px;
-    height: 400px;
   }
 }
 
 @media (min-width: 768px) {
   .slider {
     min-height: 400px;
-    padding: 0 10px 0 10px;
+    padding: 0 20px 0 20px;
   }
 
   .offer_slider {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
+    grid-template-columns: 219px 500px;
+    justify-content: flex-start;
    }
 
    .h1 {
-    color: #BDBDBD;
+    color: variables.$color2;
     font-family: TT Hoves;
-    font-size: 40px;
+    font-size: variables.$font-size40;
     font-style: normal;
-    font-weight: 300;
+    font-weight: variables.$font-weight300;
    }
 
    .sub_title {
-    color: #333;
+    color: variables.$color1;
     font-family: TT Hoves;
-    font-size: 40px;
+    font-size: variables.$font-size40;
     font-style: normal;
-    font-weight: 700;
+    font-weight: variables.$font-weight700;
    }
 
   .title_block {
     display: block;
-    margin-bottom: 40px;
+    margin-bottom: variables.$margin-bottom;
   }
 
   .navigation_block {
     width: 129px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include mixins.flex(flex, space-between, center);
     gap: 23px;
     margin: 0;
-    margin-bottom: 40px;
-    z-index: 3;
+    margin-bottom: variables.$margin-bottom;
+    z-index: variables.$z-index;
   }
 
   .offer_slider_prev {
-    width: 40px;
-    height: 40px;
-    border-radius: 0;
-    border: 1px solid #F2F2F2;
+    @include mixins.prevNext(40px, 40px);
+    border-radius: variables.$border-radius;
+    border: 1px solid variables.$colorBorder;
     margin-left: 0px;
    }
    
    .offer_slider_next {
-     width: 40px;
-     height: 40px;
-     border-radius: 0;
-     border: 1px solid #F2F2F2;
+    @include mixins.prevNext(40px, 40px);
+     border-radius: variables.$border-radius;
+     border: 1px solid variables.$colorBorder;
      margin-right: 0px;
     }
 
   .big_wrapper {
-    display: flex;
+    @include mixins.flex(flex, center, flex-start);
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
     width: 100%;
     position: static;
     transform: none;
@@ -196,10 +185,105 @@
    }
    
    .current, .total, .slash {
-    color: #BDBDBD;
+    color: variables.$color2;
     font-family: TT Hoves;
-    font-size: 24px;
+    font-size: variables.$font-size24;
     font-style: normal;
-    font-weight: 400;
+    font-weight: variables.$font-weight400;
    }
+}
+
+@media (min-width: 992px) {
+  .slider {
+    padding: 0 35px 0 57px;
+  }
+
+  .offer_slider {
+    grid-template-columns: 305px 500px;
+    justify-content: flex-start;
+   }
+
+   .h1 {
+    font-size: variables.$font-size50;
+   }
+
+   .big_wrapper {
+    width: 100%;
+    position: static;
+    transform: none;
+  }
+
+   .sub_title {
+    font-size: variables.$font-size50;
+   }
+
+   .offer_slider_wrapper {
+    height: variables.$slide-height;
+  }
+
+  .offer_slide {
+    height: variables.$slide-height;
+  }
+}
+
+@media (min-width: 1200px) {
+  .slider {
+    padding: 0 10px 0 74px;
+  }
+
+  .offer_slider {
+    grid-template-columns: 423px 593px;
+   }
+
+  .offer_slider_wrapper {
+    width: 593px;
+    height: variables.$slide-height1200;
+  }
+
+  .offer_slide {
+    height: variables.$slide-height1200;
+  }
+
+  .offer_slider_prev {
+    @include mixins.prevNext(53px, 53px);
+   }
+   
+  .offer_slider_next {
+    @include mixins.prevNext(53px, 53px);
+  }
+
+  .navigation_block {
+    margin-bottom: variables.$margin-bottom1200;
+  }
+
+  .h1 {
+    font-size: variables.$font-size64;
+   }
+
+   .sub_title {
+    font-size: variables.$font-size64;
+   }
+
+  .title_block {
+    margin-bottom: variables.$margin-bottom1200;
+  }
+}
+
+@media (min-width: 1400px) {
+  .slider {
+    padding: 0 210px 0 135px;
+  }
+
+  .offer_slider {
+    grid-template-columns: 421px 770px;
+   }
+
+  .offer_slider_wrapper {
+    width: 770px;
+    height: 829px;
+  }
+
+  .offer_slide {
+    height: 829px;
+  }
 }
