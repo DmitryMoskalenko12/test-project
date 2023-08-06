@@ -1,0 +1,263 @@
+@use '../../styles/variables.scss';
+@use '../../styles/mixins.scss';
+
+.contact {
+  padding: variables.$padding320;
+}
+
+.title {
+  color: variables.$color2;
+  font-family: TT Hoves;
+  font-size: variables.$font-size40;
+  font-style: normal;
+  font-weight: variables.$font-weight300;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.wrapper_contact {
+  display: grid;
+  grid-template-columns: 300px;
+  row-gap: 15px;
+  justify-content: center;
+}
+
+.form {
+  flex-direction: column;
+  @include mixins.flex(flex, center, center);
+  gap: 15px;
+}
+
+.input {
+  width: 300px;
+  height: 46px;
+  padding: 14px 0 14px 21px;
+  background: variables.$backg-input-color;
+  &::placeholder {
+    @include mixins.placeholder;
+  }
+  border: none;
+}
+
+.textarea {
+  width: 300px;
+  height: 147px;
+  background: variables.$backg-input-color;
+  padding: 14px 0 14px 21px;
+  border: none;
+  resize: none;
+  &::placeholder {
+   @include mixins.placeholder;
+  }
+  
+}
+
+.but {
+  @include mixins.buttonWidthHeight(222px, 71px);
+  background: variables.$color1;
+  border: none;
+  cursor: pointer;
+  a {
+    @include mixins.flex(flex, center, center);
+    gap: 15px;
+    color: variables.$button-color-backg;
+    font-family: TT Hoves;
+    font-size: variables.$font-size12;
+    font-style: normal;
+    font-weight: variables.$font-weight400;
+    letter-spacing: variables.$letterSpacing;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}
+
+.contact_picture {
+  display: none;
+}
+
+.checkbox_box {
+  display: flex;
+  position: relative;
+  margin-top: 10px;
+}
+
+.input_checkbox {
+  margin-left: 28px;
+  margin-top: 25px;
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.label_checkbox {
+ color: variables.$color1;
+ font-family: TT Hoves;
+ font-size: variables.$font-size;
+ font-style: normal;
+ font-weight: variables.$font-weight400;
+ letter-spacing: variables.$letter-spacing-check;
+ margin-left: 40px;
+ padding-top: 2px;
+ cursor: pointer;
+}
+
+.label_checkbox:before {
+    content: '';
+    display: block;
+    @include mixins.checkWidthHeight(23px, 23px);
+    border: 1px solid variables.$border-check;
+    border-radius: 7px;
+    background-color: variables.$button-color-backg;
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    z-index: 1;
+    transition: background .1s linear, border .1s linear;
+  }
+
+.label_checkbox:after {
+  content: "";
+  display: block;
+  @include mixins.checkWidthHeight(23px, 23px);
+  background: url('/images/svg/check.svg') no-repeat;
+  background-size: 14px 22px;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 2;
+  opacity: 0;
+}
+
+.input_checkbox:checked + .label_checkbox:before {
+  content:'';
+  background: variables.$check-backg;
+}
+
+.input_checkbox:checked + .label_checkbox:after {
+  content:'';
+  opacity: 1;
+}
+
+.svg {
+  path{
+    fill: variables.$button-color-backg;
+  } 
+}
+
+@media (min-width: 576px) {
+
+  .wrapper_contact {
+    grid-template-columns: 450px;
+  }
+
+  .input {
+    width: 450px;
+  }
+  
+  .textarea {
+    width: 450px; 
+  }
+}
+
+@media (min-width: 768px) {
+  .contact {
+    padding: 20px 20px 40px 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .contact {
+    padding: 0px 45px 60px 45px;
+  }
+
+  .wrapper_contact {
+    grid-template-columns: 391px 450px;
+    column-gap: 20px;
+  }
+
+  .contact_picture {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
+  .form {
+    align-items: flex-start;
+  }
+
+  .img {
+    width: 100%;
+    height: 391px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+  
+  .input {
+    width: 391px;
+  }
+  
+  .textarea {
+    width: 391px; 
+  }
+
+  .but {
+    transition: variables.$transition;
+  }
+  
+  .but:hover {
+    transition: variables.$transition;
+    background-color: variables.$background-hover-see;
+  }
+  
+  .but:active{
+    background-color: variables.$background-hover-see-active;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact {
+    padding: 100px 74px 120px 74px;
+  }
+
+  .title {
+    font-size: variables.$font-size64;
+    text-align: left;
+    margin-bottom: 22px;
+  }
+
+  .checkbox_box {
+    margin-top: 20px;
+    margin-bottom: 21px;
+  }
+
+  .wrapper_contact {
+    grid-template-columns: 391px 620px;
+    column-gap: 20px;
+    justify-content: center;
+  }
+  
+  .form {
+    gap: 10px;
+  }
+
+  .img {
+    height: 371px;
+  }
+  
+}
+
+@media (min-width: 1400px) {
+  .contact {
+    padding: 0px 78px 120px 78px;
+  }
+
+  .wrapper_contact {
+    grid-template-columns: 384px 749px;
+    column-gap: 30px;
+  }
+  
+}

@@ -8,3 +8,21 @@
   width: $width;
   height: $height;
 }
+@mixin checkWidthHeight ($width, $height) {
+  width: $width;
+  height: $height;
+}
+@mixin buttonWidthHeight ($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin placeholder {
+  color: #8D8D8D;
+  font-family: TT Hoves;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.56px;
+}

@@ -2,7 +2,7 @@
 @use '../../styles/mixins.scss';
 
 .about {
-  padding: 20px 5px 20px 5px;
+  padding: variables.$padding320;
 }
 
 .wrapper_main {
@@ -74,19 +74,23 @@
   height: 71px;
   background: variables.$button-color-backg;
   border: none;
-  color: variables.$color1;
-  font-family: TT Hoves;
-  font-size: variables.$font-size12;
-  font-style: normal;
-  font-weight: variables.$font-weight400;
-  letter-spacing: variables.$letterSpacing;
-  text-transform: uppercase;
   margin: 0 auto;
   margin-bottom: 10px;
   cursor: pointer;
+  a {
+    color: variables.$color1;
+    font-family: TT Hoves;
+    font-size: variables.$font-size12;
+    font-style: normal;
+    font-weight: variables.$font-weight400;
+    letter-spacing: variables.$letterSpacing;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
 }
 
 @media (min-width: 576px) {
+
   .wrapper_main {
     display: grid;
     grid-template-columns: repeat(1, 400px);
@@ -101,7 +105,7 @@
 
 @media (min-width: 768px) {
   .about {
-    padding: 60px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
   }
   
   .img_wrapper {
@@ -142,7 +146,7 @@
   
   .wrapper_main {
     display: grid;
-    grid-template-columns: 460px 260px;
+    grid-template-columns: 450px 255px;
     justify-content: center;
   }
   
@@ -160,7 +164,7 @@
 
 @media (min-width: 992px) {
   .about {
-    padding: 60px 35px 20px 57px;
+    padding: 0px 45px 60px 45px;
   }
 
   .img_box2 {
@@ -184,34 +188,26 @@
     margin-bottom: 30px;
   }
   
+  .see {
+    transition: variables.$transition;
+  }
+
+  .see:hover {
+    transition: variables.$transition;
+    background-color: variables.$background-hover-see;
+  }
+
+  .see:active{
+    background-color: variables.$background-hover-see-active;
+  }
+  
 }
+
 
 @media (min-width: 1200px) {
   .about {
-    padding: 120px 35px 20px 74px;
+    padding: 120px 74px 20px 74px;
   }
-
-  .img_box2 {
-    height: 80%;
-    margin-top: 40px;
-  }
-
-  .img_wrapper {
-    grid-template-columns: 270px 270px;
-    grid-template-rows: 265px 140px;
-  }
-  
-  .wrapper_main {
-    grid-template-columns: 570px 400px;
-  }
-
-  .see {
-    margin: 0;
-  }
-    
-}
-
-@media (min-width: 1200px) {
 
   .img_box2 {
     margin-top: 35px;
@@ -242,7 +238,7 @@
 @media(min-width: 1400px) {
 
   .about {
-    padding: 120px 210px 20px 135px;
+    padding: 120px 78px 0px 78px;
   }
 
   .wrapper_main {

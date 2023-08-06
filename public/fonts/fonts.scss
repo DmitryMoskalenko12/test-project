@@ -1,0 +1,58 @@
+@use '../../styles/variables.scss';
+@use '../../styles/mixins.scss';
+
+@font-face {
+  font-family: 'San Francisco Pro Display Bold';
+  src: url('../../public/fonts/SFProDisplay-Bold.eot');
+  src: url('../../public/fonts/SFProDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../../public/fonts/SFProDisplay-Bold.woff') format('woff'),
+  url('../../public/fonts/SFProDisplay-Bold.woff') format('truetype');
+  font-weight: variables.$font-weight900;
+  font-style: normal;
+  }
+
+@font-face {
+  font-family: 'TT Hoves';
+  src: url('../../public/fonts/TTHoves-Light.eot');
+  src: local('../../public/fonts/TT Hoves Light'), local('TTHoves-Light'),
+      url('../../public/fonts/TTHoves-Light.eot?#iefix') format('embedded-opentype'),
+      url('../../public/fonts/TTHoves-Light.woff2') format('woff2'),
+      url('../../public/fonts/TTHoves-Light.woff') format('woff'),
+      url('../../public/fonts/TTHoves-Light.ttf') format('truetype');
+  font-weight: variables.$font-weight300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Hoves';
+  src: url('../../public/fonts/TTHoves-Medium.eot');
+  src: local('TT Hoves Medium'), local('TTHoves-Medium'),
+      url('../../public/fonts/TTHoves-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../../public/fonts/TTHoves-Medium.woff2') format('woff2'),
+      url('../../public/fonts/TTHoves-Medium.woff') format('woff'),
+      url('../../public/fonts/TTHoves-Medium.ttf') format('truetype');
+  font-weight: variables.$font-weight400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Hoves';
+  src: url('../../public/fonts/TTHoves-DemiBold.eot');
+  src: local('../../public/fonts/TT Hoves DemiBold'), local('TTHoves-DemiBold'),
+      url('../../public/fonts/TTHoves-DemiBold.eot?#iefix') format('embedded-opentype'),
+      url('../../public/fonts/TTHoves-DemiBold.woff2') format('woff2'),
+      url('../../public/fonts/TTHoves-DemiBold.woff') format('woff'),
+      url('../../public/fonts/TTHoves-DemiBold.ttf') format('truetype');
+  font-weight: variables.$font-weight700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../../public/fonts/OpenSans-Regular.eot');
+  src: url('../../public/fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../../public/fonts/OpenSans-Regular.woff') format('woff'),
+  url('../../public/fonts/OpenSans-Regular.ttf') format('truetype');
+  font-weight: variables.$font-weight400;
+  font-style: normal;
+  }

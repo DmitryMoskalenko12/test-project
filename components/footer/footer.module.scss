@@ -1,0 +1,267 @@
+@use '../../styles/variables.scss';
+@use '../../styles/mixins.scss';
+
+.footer {
+  position: relative;
+  padding: variables.$padding320;
+  background: variables.$footer-back;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: variables.$grid320;
+  gap: 15px;
+  justify-content: center;
+}
+
+.logo {
+  display: none;
+}
+
+.info {
+  @include mixins.flex(flex, center, center);
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.title_info {
+  color: variables.$button-color-backg;
+  font-family: TT Hoves;
+  font-size: variables.$font-size16;
+  font-style: normal;
+  font-weight: variables.$font-weight700;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.info_list {
+  @include mixins.flex(flex, center, center);
+  flex-direction: column;
+  gap: 15px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.link_main {
+  color: variables.$button-color-backg;
+  font-family: TT Hoves;
+  font-size: variables.$font-size14;
+  font-style: normal;
+  font-weight: variables.$font-weight700;
+  line-height: 24px; 
+  letter-spacing: variables.$letter-spacing-check;
+  text-decoration: none;
+}
+
+.contacts {
+  @include mixins.flex(flex, center, center);
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.contacts_list {
+  @include mixins.flex(flex, center, center);
+  flex-direction: column;
+  gap: 15px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.svg {
+  width: 30px;
+}
+
+.li {
+  text-align: center;
+  width: 221px;
+}
+
+.social {
+  @include mixins.flex(flex, flex-start, center);
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.social_block {
+  min-width: 160px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.digital {
+  width: 100%;
+  text-align: center;
+  color: rgba(200, 200, 200, 0.50);
+  font-family: Open Sans;
+  font-size: variables.$font-size12;
+  font-style: normal;
+  font-weight: variables.$font-weight400;
+  line-height: 22px;
+}
+
+.hr {
+  left: 0;
+  width: 100%;
+  position: absolute;
+  bottom: 50px;
+  stroke-width: 1px;
+  stroke: variables.$button-color-backg;
+  opacity: 0.1;
+}
+
+@media (min-width: 768px) {
+
+  .footer {
+    padding: 20px 20px 20px 20px;
+  }
+
+  .logo {
+    display: block;
+  }
+
+  .contacts {
+    margin: 0;
+    justify-content: flex-start;
+  }
+
+  .social {
+   margin: 0;
+  }
+
+  .info {
+    justify-content: flex-start;
+    margin: 0;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 150px 150px 180px 165px;
+    grid-template-rows: 245px 30px;
+    grid-gap: 15px;
+    gap: 15px;
+    justify-content: variables.$just-content;
+    grid-template-areas: 
+    ". . . ."
+    ". a a .";
+  }
+
+  .digital {
+    grid-area: a;
+  }
+  
+  .hr {
+    bottom: 75px;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .footer {
+    padding: 20px 45px 20px 45px;
+  }
+
+  .wrapper {
+    grid-template-columns: 200px 200px 200px 200px;
+  }
+
+  .social_twit {
+    path {
+      transition: 0.7s all;
+    }
+   &:hover {
+    transition: 0.7s all;
+    path {
+      fill:  #1DA1F2;
+      transition: 0.7s all;
+    }
+   }
+  }
+  .social_face {
+    path {
+      transition: 0.7s all;
+    }
+    &:hover {
+      transition: 0.7s all;
+     path {
+       fill:  #1877F2;
+       transition: 0.7s all;
+     }
+    }
+   }
+
+   .social_inst {
+    path {
+      transition: 0.7s all;
+    }
+    &:hover {
+     path {
+       fill:  #C13584;
+       transition: 0.7s all;
+     }
+    }
+   }
+
+   .social_pinter {
+    path {
+      transition: 0.7s all;
+    }
+    &:hover {
+      transition: 0.7s all;
+     path {
+       fill:  #E60023;
+       transition: 0.7s all;
+     }
+    }
+   }
+}
+
+@media (min-width: 1200px) {
+
+  .footer {
+    padding: 58px 74px 20px 74px;
+  } 
+
+  .info {
+    align-items: flex-start;
+  }
+
+  .info_list {
+    align-items: flex-start;
+  }
+   
+  .social {
+    margin: 0;
+    align-items: flex-start;
+   }
+
+  .li {
+    text-align: left;
+    width: 290px;
+  }
+
+  .contacts {
+    align-items: flex-start;
+  }
+
+  .wrapper {
+    grid-template-columns: 200px 200px 295px 200px;
+  }
+
+}
+
+@media (min-width: 1400px) {
+  .footer {
+    padding: 58px 210px 20px 135px;
+  } 
+
+  .wrapper {
+    grid-template-columns: 200px 200px 330px 200px;
+  }
+
+  .contacts_list {
+    gap: 32px;
+  }
+}

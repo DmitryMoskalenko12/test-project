@@ -9,11 +9,11 @@ const Header = () => {
   const [trigger, setTrigger] = useState(false);
 
   const arrLink = [
-    {id: 1, content: "Главная", href: '#', clazz: classes.link},
-    {id: 2, content: "Галерея", href: '#', clazz: classes.link},
-    {id: 3, content: "Проекты", href: '#', clazz: classes.link},
-    {id: 4, content: "Сертификаты", href: '#', clazz: classes.link},
-    {id: 5, content: "Контакты", href: '#', clazz: classes.link},
+    {id: 1, content: "Главная", href: '#main', clazz: classes.link},
+    {id: 2, content: "Галерея", href: '#slider', clazz: classes.link},
+    {id: 3, content: "Проекты", href: '#projects', clazz: classes.link},
+    {id: 4, content: "Сертификаты", href: '#contacts', clazz: classes.link},
+    {id: 5, content: "Контакты", href: '#footer', clazz: classes.link},
   ];
 
   const onActive = (e) => {
@@ -25,7 +25,7 @@ const Header = () => {
   }
 
   return (
-    <header className={classes.header}>
+    <header id='main' className={classes.header}>
       <div className="container">
         <div className={classes.wrapper}>
           <div className={classes.img_wrapper}>

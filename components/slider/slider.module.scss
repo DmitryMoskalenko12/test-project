@@ -1,7 +1,9 @@
 @use '../../styles/variables.scss';
 @use '../../styles/mixins.scss';
 
+
 .slider {
+  padding: variables.$padding320;
   min-height: 400px;
 }
 
@@ -75,14 +77,17 @@
   height: 71px;
   background: variables.$button-color-backg;
   border: none;
-  color: variables.$color1;
-  font-family: TT Hoves;
-  font-size: variables.$font-size12;
-  font-style: normal;
-  font-weight: variables.$font-weight400;
-  letter-spacing: variables.$letterSpacing;
-  text-transform: uppercase;
   cursor: pointer;
+  a {
+    color: variables.$color1;
+    font-family: TT Hoves;
+    font-size: variables.$font-size12;
+    font-style: normal;
+    font-weight: variables.$font-weight400;
+    letter-spacing: variables.$letterSpacing;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
 }
 
 .slider_field {
@@ -111,8 +116,7 @@
 
 @media (min-width: 768px) {
   .slider {
-    min-height: 400px;
-    padding: 0 20px 0 20px;
+    padding: 0 20px 20px 20px;
   }
 
   .offer_slider {
@@ -195,12 +199,34 @@
 
 @media (min-width: 992px) {
   .slider {
-    padding: 0 35px 0 57px;
+    padding: 0px 45px 60px 45px;
+  }
+
+  .offer_slider_prev, .offer_slider_next {
+    transition: variables.$transition;
+  }
+
+  .offer_slider_prev:hover {
+    transition: variables.$transition;
+    background-color: variables.$background-hover;
+  }
+
+  .offer_slider_next:hover {
+    transition: variables.$transition;
+    background-color: variables.$background-hover;
+  }
+
+  .offer_slider_prev:active {
+    background-color: variables.$background-hover-see-active;
+  }
+
+  .offer_slider_next:active {
+    background-color: variables.$background-hover-see-active;
   }
 
   .offer_slider {
-    grid-template-columns: 305px 500px;
-    justify-content: flex-start;
+    grid-template-columns: 385px 500px;
+    justify-content: center;
    }
 
    .h1 {
@@ -224,15 +250,29 @@
   .offer_slide {
     height: variables.$slide-height;
   }
+
+  .see {
+    transition: variables.$transition;
+  }
+
+  .see:hover {
+    transition: variables.$transition;
+    background-color: variables.$background-hover-see;
+  }
+
+  .see:active{
+    background-color: variables.$background-hover-see-active;
+  }
 }
 
 @media (min-width: 1200px) {
   .slider {
-    padding: 0 10px 0 74px;
+    padding: 0 74px 0 74px;
   }
 
   .offer_slider {
-    grid-template-columns: 423px 593px;
+    grid-template-columns: 420px 594px;
+    justify-content: center;
    }
 
   .offer_slider_wrapper {
@@ -271,11 +311,12 @@
 
 @media (min-width: 1400px) {
   .slider {
-    padding: 0 210px 0 135px;
+    padding: 0 78px 0 78px;
   }
 
   .offer_slider {
-    grid-template-columns: 421px 770px;
+    grid-template-columns: 402px 770px;
+    justify-content: center;
    }
 
   .offer_slider_wrapper {

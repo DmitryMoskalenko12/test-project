@@ -1,0 +1,256 @@
+@use '../../styles/variables.scss';
+@use '../../styles/mixins.scss';
+
+.projects {
+  padding: variables.$padding320;
+}
+
+.title {
+  color: variables.$color2;
+  font-family: TT Hoves;
+  font-size: variables.$font-size40;
+  font-style: normal;
+  font-weight: variables.$font-weight300;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.wrapper_projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 200px);
+  grid-auto-rows: 200px;
+  justify-content: center;
+  row-gap: 10px;
+}
+
+.img_box, .img_box2, .img_box3, .img_box4, .img_box5 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.up_content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba($color: variables.$color1, $alpha: 0.8);
+}
+
+.deep_wrap {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 250px;
+  margin: 0 auto;
+}
+
+.descr {
+  color: variables.$button-color-backg;
+  font-family: TT Hoves;
+  font-size: variables.$font-size37;
+  font-style: normal;
+  font-weight: variables.$font-weight700;
+  text-align: left;
+  margin-bottom: 14px;
+}
+
+.detail {
+ border: none;
+ background: transparent;
+  a {
+    @include mixins.flex(flex, center, center);
+    gap: 15px;
+    color: variables.$button-color-backg;
+    font-family: Gothic A1;
+    font-size: variables.$font-size12;
+    font-style: normal;
+    font-weight: variables.$font-weight400;
+    letter-spacing: variables.$letterSpacing;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}
+
+.see {
+  @include mixins.flex(flex, center, center);
+  gap: 15px;
+  @include mixins.buttonWidthHeight(222px, 71px);
+  background: variables.$color1;
+  border: none;
+  a {
+    color: variables.$button-color-backg;
+    font-family: TT Hoves;
+    font-size: variables.$font-size12;
+    font-style: normal;
+    font-weight: variables.$font-weight400;
+    letter-spacing: variables.$letterSpacing;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.svg {
+  path{
+    fill: variables.$button-color-backg;
+  } 
+}
+
+@media (min-width: 768px) {
+  .wrapper_projects {
+    grid-template-columns: 728px;
+  }
+
+  .projects {
+    padding: 20px 20px 20px 20px;
+  }
+}
+
+@media (min-width: 992px) {
+ .projects {
+  padding: 0px 45px 60px 45px;
+ }
+
+ .img_box, .img_box2, .img_box3, .img_box4, .img_box5 {
+  transition: variables.$transition; 
+}
+
+.img_box,.img_box2, .img_box3, .img_box4, .img_box5 {
+  &:hover {
+    transition: variables.$transition;
+    transform: scale(105%);
+    box-shadow: 0px 0px 20px variables.$box-shadow;
+  }
+}
+
+.see {
+  transition: variables.$transition;
+}
+
+.see:hover {
+  transition: variables.$transition;
+  background-color: variables.$background-hover-see;
+}
+
+.see:active{
+  background-color: variables.$background-hover-see-active;
+}
+
+.detail {
+  transition: variables.$transition;
+  a:hover {
+    transition: variables.$transition;
+    color: variables.$background-hover-see;
+    path{
+      transition: variables.$transition;
+      fill: variables.$background-hover-see;
+    }
+  }
+}
+
+.detail {
+  transition: variables.$transition;
+  a:active {
+    transition: variables.$transition;
+    color: variables.$background-hover-see-active;
+    path{
+      transition: variables.$transition;
+      fill: variables.$background-hover-see-active;
+    }
+  }
+}
+
+.detail {
+  transition: variables.$transition;
+  a {
+    transition: variables.$transition;
+    path{
+      transition: variables.$transition;
+    }
+  }
+}
+}
+
+@media (min-width: 1200px) {
+  .projects {
+    padding: 100px 74px 20px 74px;
+  }
+
+  .title {
+    font-size: variables.$font-size64;
+    text-align: left;
+    margin-bottom: 60px;
+  } 
+
+  .descr {
+    font-size: variables.$font-size32;
+  }
+
+  .wrapper {
+   width: 100%;
+   margin: 0;
+   position: relative;
+  }
+
+  .see {
+    position: absolute;
+    right: 0;
+  }
+
+  .wrapper_projects {
+    display: grid;
+    grid-template-columns: 215px 244px 200px 285px;
+    grid-template-rows: repeat(2, 255px);
+    grid-auto-rows: 255px;
+    gap: 30px;
+    grid-template-areas:
+    "a a b b"
+    "c d d e"; 
+  }
+  .img_box {
+    grid-area: a;
+  }
+
+  .img_box2 {
+    grid-area: b;
+  }
+
+  .img_box3 {
+    grid-area: c;
+  }
+
+  .img_box4 {
+    grid-area: d;
+  }
+
+  .img_box5 {
+    grid-area: e;
+  }
+
+}
+
+@media (min-width: 1400px) {
+  .projects {
+    padding: 120px 78px 120px 78px;
+  }
+
+  .wrapper {
+   width: 1170px;
+   margin: 0;
+  }
+
+  .wrapper_projects {
+    grid-template-columns: 270px 270px 200px 340px;
+  }
+}
