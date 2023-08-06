@@ -15,6 +15,7 @@
 }
 
 .logo {
+  margin: 0 auto;
   display: none;
 }
 
@@ -115,7 +116,7 @@
 @media (min-width: 768px) {
 
   .footer {
-    padding: 20px 20px 20px 20px;
+    padding: variables.$padding768;
   }
 
   .logo {
@@ -138,7 +139,7 @@
 
   .wrapper {
     display: grid;
-    grid-template-columns: 150px 150px 180px 165px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 245px 30px;
     grid-gap: 15px;
     gap: 15px;
@@ -161,10 +162,6 @@
 
   .footer {
     padding: 20px 45px 20px 45px;
-  }
-
-  .wrapper {
-    grid-template-columns: 200px 200px 200px 200px;
   }
 
   .social_twit {
@@ -246,10 +243,6 @@
     align-items: flex-start;
   }
 
-  .wrapper {
-    grid-template-columns: 200px 200px 295px 200px;
-  }
-
 }
 
 @media (min-width: 1400px) {
@@ -257,11 +250,17 @@
     padding: 58px 210px 20px 135px;
   } 
 
-  .wrapper {
-    grid-template-columns: 200px 200px 330px 200px;
-  }
-
   .contacts_list {
     gap: 32px;
   }
+
+  .logo {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer {
+    padding: 58px 125px 20px 125px;
+  } 
 }

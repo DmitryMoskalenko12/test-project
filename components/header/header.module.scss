@@ -2,7 +2,7 @@
 @use '../../styles/mixins.scss';
 
   .header {
-    padding: 20px 5px 20px 5px;
+    padding: 20px 10px 20px 10px;
     min-height: 60px;
   }
 
@@ -103,7 +103,7 @@
   }
 
   .link_active {
-    padding: 3.89px, 0, 3.89px, 0;
+    padding: 3.89px 0 3.89px 0;
     border-top: 1px;
     border-bottom: 1px;
     border-right: 0;
@@ -147,7 +147,7 @@
 
 @media (min-width: 768px) {
   .header {
-    padding: 29.14px 20px 31.33px 20px;
+    padding: 29.14px 15px 31.33px 15px;
     min-height: 102px;
   }
 
@@ -199,6 +199,22 @@
 
   .wrapper {
     @include mixins.flex(flex, space-between, center);
+    gap: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header {
+    padding: 29.14px 78px 31.33px 78px;
+  }
+
+  .img_wrapper {
+    position: relative;
+    left: -105px;
+  }
+
+  .wrapper {
+    @include mixins.flex(flex, space-around, center);
     gap: 0;
   }
 }

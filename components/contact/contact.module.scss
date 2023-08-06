@@ -144,6 +144,18 @@
   } 
 }
 
+.loading {
+  color: blue;
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}
+
 @media (min-width: 576px) {
 
   .wrapper_contact {
@@ -161,7 +173,7 @@
 
 @media (min-width: 768px) {
   .contact {
-    padding: 20px 20px 40px 20px;
+    padding: 20px 15px 40px 15px;
   }
 }
 
@@ -260,4 +272,10 @@
     column-gap: 30px;
   }
   
+}
+
+@media (min-width: 1440px) {
+  .contact {
+    padding: 100px 125px 120px 125px;
+  }
 }

@@ -29,7 +29,7 @@ const Header = () => {
       <div className="container">
         <div className={classes.wrapper}>
           <div className={classes.img_wrapper}>
-            <a href="#">
+            <a href="#main">
               <Image src={'/images/header-logo/logo1.png'} alt='You will see logo' width={68.552} height={41.527}/>
             </a>
           </div>

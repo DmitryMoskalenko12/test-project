@@ -100,21 +100,13 @@ const Slider = () => {
       <div ref={elemWidth} className={classes.offer_slider_wrapper}>
         <div style = {{transform: `translateX(-${offset}px)`, width: 100 * countSlides + '%'}} className={classes.slider_field}>
           <div className={classes.offer_slide}>
-            <Image src={'/images/slider-image/slider-image.png'} alt="You will see home project" width={300} height={400}/>
+            <Image src={'/images/slider-image/slider-image.png'} alt="You will see home project" width={770} height={829}/>
             <Button clazz={classes.see} svg_clazz={classes.svg} content={'Взглянуть'}/>
          </div>
         <div className={classes.offer_slide}>
-            <Image src={'/images/slider-image/slider-image.png'} alt="You will see home project" width={300} height={400}/>
+            <Image src={'/images/slider-image/slider-image.png'} alt="You will see home project" width={770} height={829}/>
             <Button clazz={classes.see} svg_clazz={classes.svg} content={'Взглянуть'}/>
-        </div>
-        <div className={classes.offer_slide}>
-            <Image src={'/images/slider-image/slider-image.png'} alt="You will see home project" width={300} height={400}/>
-            <Button clazz={classes.see} svg_clazz={classes.svg} content={'Взглянуть'}/>
-        </div>
-        <div className={classes.offer_slide}>
-            <Image src={'/images/slider-image/slider-image.png'} alt="You will see home project" width={300} height={400}/>
-            <Button clazz={classes.see} svg_clazz={classes.svg} content={'Взглянуть'}/>
-        </div>     
+        </div>    
         </div>
       </div>
   </div>

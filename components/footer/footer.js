@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container">
         <div className={classes.wrapper}>
           <div className={classes.logo}>
-            <a href="#">
+            <a href="#main">
              <Image src={'/images/logo/logo.png'} alt='You will see logo' width={120} height={120}/>
             </a>
           </div>

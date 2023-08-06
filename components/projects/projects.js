@@ -8,11 +8,11 @@ const Projects = () => {
   const [content, setContent] = useState(1);
 
   const arrProject = [
-   {id: 1, path:'/images/company-project/project5.png', alt:'You will see project', width: 270, height: 140, descr: 'ДОСУГОВЫЙ ЦЕНТР', href:"#", clazz: classes.img_box  },
-   {id: 2, path:'/images/company-project/project1.png', alt:'You will see project', width: 270, height: 140, descr: 'ДОСУГОВЫЙ ЦЕНТР2', href:"#", clazz: classes.img_box2 },
-   {id: 3, path:'/images/company-project/project2.png', alt:'You will see project', width: 270, height: 140, descr: 'ДОСУГОВЫЙ ЦЕНТР3', href:"#", clazz: classes.img_box3  },
-   {id: 4, path:'/images/company-project/project3.png', alt:'You will see project', width: 270, height: 140, descr: 'ДОСУГОВЫЙ ЦЕНТР4', href:"#", clazz: classes.img_box4  },
-   {id: 5, path:'/images/company-project/project4.png', alt:'You will see project', width: 270, height: 140, descr: 'ДОСУГОВЫЙ ЦЕНТР5', href:"#", clazz: classes.img_box5 }
+   {id: 1, path:'/images/company-project/project5.png', alt:'You will see project', width: 570, height: 255, descr: 'ДОСУГОВЫЙ ЦЕНТР', href:"#", clazz: classes.img_box  },
+   {id: 2, path:'/images/company-project/project1.png', alt:'You will see project', width: 570, height: 255, descr: 'ДОСУГОВЫЙ ЦЕНТР2', href:"#", clazz: classes.img_box2 },
+   {id: 3, path:'/images/company-project/project2.png', alt:'You will see project', width: 270, height: 255, descr: 'ДОСУГОВЫЙ ЦЕНТР3', href:"#", clazz: classes.img_box3  },
+   {id: 4, path:'/images/company-project/project3.png', alt:'You will see project', width: 470, height: 255, descr: 'ДОСУГОВЫЙ ЦЕНТР4', href:"#", clazz: classes.img_box4  },
+   {id: 5, path:'/images/company-project/project4.png', alt:'You will see project', width: 370, height: 255, descr: 'ДОСУГОВЫЙ ЦЕНТР5', href:"#", clazz: classes.img_box5 }
   ]
  
   const onGetContent = (id) => {

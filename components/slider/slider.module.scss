@@ -87,6 +87,7 @@
     letter-spacing: variables.$letterSpacing;
     text-transform: uppercase;
     text-decoration: none;
+    padding: variables.$button-click-link-slider;
   }
 }
 
@@ -116,7 +117,7 @@
 
 @media (min-width: 768px) {
   .slider {
-    padding: 0 20px 20px 20px;
+    padding: 0 15px 20px 15px;
   }
 
   .offer_slider {
@@ -327,4 +328,16 @@
   .offer_slide {
     height: 829px;
   }
+}
+
+@media (min-width: 1440px) {
+  .slider {
+    padding: 0 125px 0 125px;
+  }
+
+  .offer_slider {
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+   }
+
 }

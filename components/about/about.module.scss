@@ -86,6 +86,7 @@
     letter-spacing: variables.$letterSpacing;
     text-transform: uppercase;
     text-decoration: none;
+    padding: variables.$button-click-link-about;
   }
 }
 
@@ -105,7 +106,7 @@
 
 @media (min-width: 768px) {
   .about {
-    padding: 20px 20px 20px 20px;
+    padding: variables.$padding768;
   }
   
   .img_wrapper {
@@ -206,7 +207,7 @@
 
 @media (min-width: 1200px) {
   .about {
-    padding: 120px 74px 20px 74px;
+    padding: 120px 74px 0 74px;
   }
 
   .img_box2 {
@@ -244,4 +245,12 @@
   .wrapper_main {
     background: linear-gradient(to bottom, #FBFBFB 95%, transparent 95%);
   }
+}
+
+@media(min-width: 1440px) {
+
+  .about {
+    padding: 120px 125px 0px 125px;
+  }
+
 }

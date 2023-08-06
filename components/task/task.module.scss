@@ -25,8 +25,8 @@
   color: variables.$colorBorder;
   font-family: 'San Francisco Pro Display Bold';
   font-size: variables.$font-size100;
-  /* font-style: normal;
-  font-weight: variables.$font-weight900; */
+  font-style: normal;
+  font-weight: variables.$font-weight900;
   line-height: normal;
   text-align: center;
  }
@@ -34,7 +34,7 @@
  .text {
   color: variables.$color1;
   font-family: TT Hoves;
-  font-size: variables.$font-size22;
+  font-size: variables.$font-size16;
   font-style: normal;
   font-weight: variables.$font-weight400;
   line-height: 36px;
@@ -55,7 +55,7 @@
 
  @media (min-width: 768px) {
   .task {
-    padding: 20px 20px 20px 20px;
+    padding: variables.$padding768;
   }
 
   .wrapper {
@@ -84,12 +84,17 @@
 
   .text {
     text-align: left;
+    font-size: variables.$font-size16;
    }
  }
 
 @media(min-width: 992px) {
   .task {
     padding: 0px 45px 60px 45px
+  }
+
+  .text {
+    font-size: variables.$font-size19;
   }
 }
 
@@ -110,6 +115,7 @@
 
    .text {
     text-align: left;
+    font-size: variables.$font-size22;
    }
  }
 
@@ -125,4 +131,14 @@
   .wrapper {
     column-gap: 110px;
   }
+ }
+
+ @media (min-width: 1400px) {
+  .task {
+    padding: 120px 125px 0px 125px;
+  }
+
+   .text {
+    font-size: 20px;
+   }
  }

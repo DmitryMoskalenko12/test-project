@@ -14,7 +14,7 @@ export default function HomePage() {
      <Task/>
      <Projects/>
      <Contact/>
-     <Footer/>
+     <Footer/> 
     </>
   )
 }
