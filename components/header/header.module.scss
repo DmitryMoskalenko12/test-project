@@ -53,6 +53,9 @@
     height: 100%;
     background-color: variables.$aside-panel-color;
     transition: 1s all;
+    ul {
+      z-index: 80;
+    }
   }
   
   .hamburger {

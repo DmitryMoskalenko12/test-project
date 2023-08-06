@@ -20,8 +20,10 @@ const Header = () => {
     setActiveLi(e.currentTarget.textContent);
   };
 
-  const onTrigger = () => {
-   setTrigger(trig => !trig)
+  const onTrigger = (e) => {
+    if (e.target.tagName === 'NAV' || e.target.tagName === 'DIV') {
+      setTrigger(trig => !trig)
+    }
   }
 
   return (
@@ -34,7 +36,7 @@ const Header = () => {
             </a>
           </div>
 
-          <nav className={cn(classes.nav_header, {[classes.active_nav]: trigger})}>
+          <nav onClick={onTrigger} className={cn(classes.nav_header, {[classes.active_nav]: trigger})}>
             <ul>
               {
                 arrLink.map(({id, href, content, clazz}) => {
