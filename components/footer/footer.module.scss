@@ -166,53 +166,69 @@
 
   .social_twit {
     path {
-      transition: 0.7s all;
+      transition: variables.$transition;
     }
    &:hover {
-    transition: 0.7s all;
+    transition: variables.$transition;
     path {
-      fill:  #1DA1F2;
-      transition: 0.7s all;
+      fill: variables.$twit;
+      transition: variables.$transition;
     }
    }
   }
   .social_face {
     path {
-      transition: 0.7s all;
+      transition: variables.$transition;
     }
     &:hover {
-      transition: 0.7s all;
+      transition: variables.$transition;
      path {
-       fill:  #1877F2;
-       transition: 0.7s all;
+       fill: variables.$face;
+       transition: variables.$transition;
      }
     }
    }
 
    .social_inst {
     path {
-      transition: 0.7s all;
+      transition: variables.$transition;
     }
     &:hover {
      path {
-       fill:  #C13584;
-       transition: 0.7s all;
+       fill: variables.$insta;
+       transition: variables.$transition;
      }
     }
    }
 
    .social_pinter {
     path {
-      transition: 0.7s all;
+      transition: variables.$transition;
     }
     &:hover {
-      transition: 0.7s all;
+      transition: variables.$transition;
      path {
-       fill:  #E60023;
-       transition: 0.7s all;
+       fill: variables.$pinter;
+       transition: variables.$transition;
      }
     }
    }
+
+   .link_main {
+    transition: variables.$transition;
+    &:hover {
+     color: variables.$background-hover-see;
+     transition: variables.$transition;
+    }
+  }
+
+  .link_main {
+    transition: variables.$transition;
+    &:active {
+     color: variables.$background-hover-see-active;
+     transition: variables.$transition;
+    }
+  }
 }
 
 @media (min-width: 1200px) {
